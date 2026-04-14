@@ -45,14 +45,20 @@ git clone https://github.com/TUMH0404/python-stud.git
 cd python-stud
 ```
 
-macの場合
+#### winの場合
+powershell起動後、以下を実行する
+```bash
+./start_python_history.bat
+```
 
+#### macの場合
 ターミナル起動後、以下を実行する
 ```bash
 chmod +x start_python_history.command
 ./start_python_history.command
 ```
 
+`>>>`が表示されれば成功！
 
 
 入力終了後、exit()で保存される。
