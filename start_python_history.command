@@ -16,7 +16,7 @@ echo "必要なライブラリを確認しています..."
 python -m pip install --upgrade pip
 python -m pip install -r "$BASE_DIR/requirements.txt"
 
-export PYTHONSTARTUP="$BASE_DIR/startup.py"
+export PYTHONSTARTUP="$BASE_DIR/history_repl.py"
 
 echo "Pythonを起動します..."
 python
