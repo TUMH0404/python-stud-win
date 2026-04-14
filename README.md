@@ -14,3 +14,24 @@
 ---
 
 ## 📁 フォルダ構成
+sample-stud
+├─ start_python_history.bat # Windows起動用
+├─ history_repl.py # 履歴保存ロジック
+├─ requirements.txt # 必要ライブラリ
+└─ env/ # 仮想環境（自動生成）
+
+---
+
+## 🚀 使い方
+
+### ▶ Windows
+
+1. 
+2. `start_python_history.bat` をダブルクリック  
+3. 新しいコマンドプロンプトが開く  
+4. Pythonが起動  
+
+```python
+>>> a = 10
+>>> b = 20
+>>> a + b
