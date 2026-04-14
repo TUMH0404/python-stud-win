@@ -56,5 +56,6 @@ Pythonがインストールされている必要があります。
 
 #### Windows
 
-powershell
+```powershell
 python --version
+```
