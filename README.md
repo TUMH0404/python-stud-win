@@ -25,17 +25,28 @@ sample-stud
 
 ## 🚀 使い方
 
-### ▶ Windows
+### 📥 ダウンロード方法（GitHub）
 
-1. https://github.com/TUMH0404/python-stud-win.git
-2. python-stud-winにある`start_python_history.bat` をダブルクリック  
-3. 新しいコマンドプロンプトが開く  
-4. Pythonが起動  
+本プロジェクトは GitHub から取得できます。
 
+---
+
+### ✔ 方法①（推奨：git）
+
+```bash
+git clone https://github.com/TUMH0404/python-stud-win.git
+```
+取得後
+```bash
+cd python-stud-win
+```
+
+入力終了後、exit()で保存される。
 ```python
 >>> a = 10
 >>> b = 20
 >>> a + b
+>>> exit() #or quit() 
 ```
 
 
