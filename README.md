@@ -1,4 +1,5 @@
-# 📘 Python対話履歴 自動保存環境（Windows / Mac対応）
+# 📘 Python対話履歴 自動保存環境（Windows）
+
 
 ## 🎯 概要
 本プロジェクトは、Python対話モード（`>>>`）で入力したコマンド履歴を  
@@ -35,3 +36,23 @@ sample-stud
 >>> a = 10
 >>> b = 20
 >>> a + b
+
+---
+### ✔ Pythonのインストール
+
+Pythonがインストールされている必要があります。
+
+#### 推奨バージョン
+- **Python 3.11（推奨）**
+- Python 3.10〜3.14 で動作確認済み
+
+※ Windows環境では、履歴取得の都合上 `pyreadline3` を使用しています
+
+---
+
+### ✔ Pythonの確認方法
+
+#### Windows
+
+```powershell
+python --version
