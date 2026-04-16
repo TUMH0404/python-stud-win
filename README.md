@@ -31,13 +31,9 @@ sample-stud
 
 ## 🚀 使い方
 
-### 📥 ダウンロード方法（GitHub）
+### 📥 ダウンロード方法
 
-本プロジェクトは GitHub から取得できます。
-
----
-
-### ✔ 方法①（推奨：git）
+#### ✔ 方法①（推奨：git）
 
 ```bash
 git clone https://github.com/TUMH0404/python-stud.git
@@ -47,13 +43,13 @@ git clone https://github.com/TUMH0404/python-stud.git
 cd python-stud
 ```
 
-#### winの場合
+##### winの場合
 powershell起動後、以下を実行する
 ```bash
 ./start_python_history.bat
 ```
 
-#### macの場合
+##### macの場合
 ターミナル起動後、以下を実行する
 ```bash
 chmod +x start_python_history.command
@@ -80,9 +76,8 @@ Pythonがインストールされている必要があります。
 
 #### 推奨バージョン
 - **Python 3.11（推奨）**
-- Python 3.10〜3.14 で動作確認済み
+- Python 3.9〜3.14 で動作確認済み
 
-### ✔ Pythonのインストール
 
 以下のリンクでインストーラーがダウンロードされるので、ダブルクリックしてインストールしてください。
 
@@ -96,7 +91,7 @@ Mac
 
 ---
 
-### ✔ Pythonの確認方法
+#### Pythonの確認方法
 
 ```powershell
 python --version
