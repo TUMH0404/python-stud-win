@@ -23,6 +23,8 @@ sample-stud
 
 ├─ requirements.txt # 必要ライブラリ
 
+├─ start_python_history_any.bat #Windows用（未確認）
+
 └─ start_python_history.command # mac起動用
 
 ---
