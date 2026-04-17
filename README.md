@@ -69,6 +69,7 @@ cd ./main/python-stud-main
 ```bash
 cd $HOME
 rm -rf main.zip python-stud-main
+curl -L -O https://github.com/TUMH0404/python-stud/archive/refs/heads/main.zip
 unzip main.zip
 cd python-stud-main
 chmod +x start_python_history.command
