@@ -75,7 +75,11 @@ chmod +x start_python_history.command
 
 `>>>`が表示されれば成功！
 
+
+#### ✔ 演習課題に取り組む
 課題の過程が記録される。
+
+課題が終了したら、必ず、`exit()` または `quit()`で終了する。
 
 exit()で保存される。
 ```python
