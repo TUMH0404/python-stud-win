@@ -58,6 +58,7 @@ chmod +x start_python_history.command
 #### ✔ 方法②（zip）
 ##### winの場合
 ```powershell
+if exist "python-stud-main" rmdir /s /q "python-stud-main"
 curl -L -O https://github.com/TUMH0404/python-stud/archive/refs/heads/main.zip
 unzip main.zip
 cd python-stud-main
