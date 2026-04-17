@@ -67,7 +67,8 @@ cd ./main/python-stud-main
 ```
 ##### macの場合
 ```bash
-curl -L -O https://github.com/TUMH0404/python-stud/archive/refs/heads/main.zip
+cd $HOME
+rm -rf main.zip python-stud-main
 unzip main.zip
 cd python-stud-main
 chmod +x start_python_history.command
