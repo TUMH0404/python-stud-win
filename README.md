@@ -63,7 +63,7 @@ Remove-Item "main", "main.zip" -Recurse -Force -ErrorAction SilentlyContinue
 Invoke-WebRequest -Uri "https://github.com/TUMH0404/python-stud/archive/refs/heads/main.zip" -OutFile "main.zip"
 Expand-Archive main.zip
 cd ./main/python-stud-main
-.¥start_python_history.bat
+./start_python_history.bat
 ```
 ##### macの場合
 ```bash
