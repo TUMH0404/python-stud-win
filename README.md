@@ -58,10 +58,11 @@ chmod +x start_python_history.command
 #### ✔ 方法②（zip）
 ##### winの場合
 ```powershell
-Invoke-WebRequest -Uri "https://github.com/TUMH0404/python-stud/archive/refs/heads/main.zip" -OutFile "python-stud-main.zip"
-Expand-Archive python-stud-main.zip
+Remove-Item "python-stud-main" -Recurse -Force -ErrorAction SilentlyContinue
+Invoke-WebRequest -Uri "https://github.com/TUMH0404/python-stud/archive/refs/heads/main.zip" -OutFile "main.zip"
+Expand-Archive main.zip
 cd python-stud-main
-.\start_python_history.bat
+./start_python_history.bat
 ```
 ##### macの場合
 ```bash
