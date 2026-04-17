@@ -61,8 +61,8 @@ chmod +x start_python_history.command
 cd $HOME
 Remove-Item "main", "main.zip" -Recurse -Force -ErrorAction SilentlyContinue
 Invoke-WebRequest -Uri "https://github.com/TUMH0404/python-stud/archive/refs/heads/main.zip" -OutFile "main.zip"
-Expand-Archive main.zip
-cd ./main/python-stud-main
+Expand-Archive main.zip -DestinationPath "python-stud-main"
+cd ./python-stud-main
 ./start_python_history.bat
 ```
 ##### macの場合
