@@ -74,6 +74,8 @@ chmod +x start_python_history.command
 ./start_python_history.command  # or source ./start_python_history.command
 ```
 
+---
+
 `>>>`が表示されれば成功！
 
 
