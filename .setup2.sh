@@ -2,7 +2,12 @@
 
 TARGET="$HOME/Documents/python-stud"
 
-echo "Checking existing folder..."
+echo "====================================="
+echo "  Git + Clone Setup (Mac)"
+echo "====================================="
+
+echo ""
+echo "1. Checking existing folder..."
 
 if [ -d "$TARGET" ]; then
     rm -rf "$TARGET"
@@ -11,14 +16,32 @@ else
     echo "Folder does not exist."
 fi
 
-echo "Moving to Documents..."
+echo ""
+echo "2. Moving to Documents..."
 cd "$HOME/Documents" || exit 1
 
-echo "Cloning repository..."
-git clone https://github.com/TUMH0404/python-stud.git
+echo ""
+echo "3. Checking Git..."
 
-echo "Moving into project folder..."
-cd "$HOME/Documents/python-stud" || exit 1
+if ! command -v git &> /dev/null; then
+    echo "Git is not installed."
+    echo "Please run 'git' once and follow the installation instructions."
+    exit 1
+fi
 
+echo ""
+echo "4. Cloning repository..."
+
+if git clone https://github.com/TUMH0404/python-stud.git; then
+    echo "Clone successful."
+else
+    echo "Clone failed."
+    exit 1
+fi
+
+echo ""
+echo "5. Moving into project folder..."
+cd "$TARGET" || exit 1
+
+echo ""
 echo "All done."
-
