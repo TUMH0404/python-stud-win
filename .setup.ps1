@@ -32,7 +32,7 @@ Write-Host "3. Installation complete. Checking Git version..."
 
 Write-Host ""
 Write-Host "4. Cloning sample repository..."
-Set-Location "$env:USERPROFILE\Desktop"
+Set-Location "$env:USERPROFILE\Documents"
 & $GIT clone https://github.com/TUMH0404/python-stud.git
 
 Write-Host ""
