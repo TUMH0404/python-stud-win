@@ -50,8 +50,12 @@ powershell起動後、以下を実行する
 ##### macの場合
 ターミナル起動後、以下を実行する
 ```bash
-chmod +x start_python_history.command
-./start_python_history.command  # or source ./start_python_history.command
+cd ~/Desktop \
+&& rm -rf python-stud \
+&& git clone https://github.com/TUMH0404/python-stud.git \
+&& cd ./python-stud \
+&& chmod +x start_python_history.command \
+&& source ./start_python_history.command
 ```
 #### ✔ 方法②（zip）
 ##### winの場合
