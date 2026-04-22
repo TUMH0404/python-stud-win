@@ -19,3 +19,5 @@ if (Test-Path $GIT) {
 }
 
 Set-Location "$env:USERPROFILE\Documents\python-stud"
+
+.\start_python_history.bat
