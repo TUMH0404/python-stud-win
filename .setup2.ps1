@@ -1,5 +1,7 @@
 $TARGET = "$env:USERPROFILE\Documents\python-stud"
-$GIT    = "$env:ProgramFiles\Git\bin\git.exe"
+$GIT    = "$env:LOCALAPPDATA\PortableGit\cmd\git.exe"
+
+Set-Location "$env:USERPROFILE\Documents"
 
 if (Test-Path $TARGET) {
     Remove-Item -Recurse -Force $TARGET
