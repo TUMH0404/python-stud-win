@@ -1,40 +1,42 @@
-$URL  = "https://github.com/git-for-windows/git/releases/download/v2.54.0.windows.1/Git-2.54.0-64-bit.exe"
-$FILE = "$env:TEMP\Git-2.54.0-64-bit.exe"
-$GIT  = "${env:ProgramFiles}\Git\bin\git.exe"
+$TARGET = "$env:USERPROFILE\Documents\python-stud"
 
-Write-Host "====================================="
-Write-Host "  Git for Windows Auto Install"
-Write-Host "====================================="
-Write-Host ""
+# Gitを探す（PATH優先）
+$GIT = (Get-Command git -ErrorAction SilentlyContinue)?.Source
 
-Write-Host "1. Downloading installer..."
-Invoke-WebRequest -Uri $URL -OutFile $FILE
+# 見つからなければ代表的な場所を探す
+if (-not $GIT) {
+    $candidates = @(
+        "$env:ProgramFiles\Git\bin\git.exe",
+        "$env:LOCALAPPDATA\Programs\Git\bin\git.exe",
+        "$env:USERPROFILE\tools\git\cmd\git.exe"
+    )
 
-if (-not (Test-Path $FILE)) {
-    Write-Host ""
-    Write-Host "[Error] Download failed."
-    exit 1
+    foreach ($path in $candidates) {
+        if (Test-Path $path) {
+            $GIT = $path
+            break
+        }
+    }
 }
 
-Write-Host ""
-Write-Host "2. Installing Git..."
-Start-Process -FilePath $FILE -ArgumentList "/VERYSILENT /NORESTART" -Wait
-
-if (-not (Test-Path $GIT)) {
-    Write-Host ""
-    Write-Host "[Error] Git installation could not be confirmed."
-    exit 1
+# フォルダ削除
+if (Test-Path $TARGET) {
+    Remove-Item -Recurse -Force $TARGET
+    Write-Host "Folder deleted."
+} else {
+    Write-Host "Folder does not exist."
 }
 
-Write-Host ""
-Write-Host "3. Installation complete. Checking Git version..."
-& $GIT --version
-
-Write-Host ""
-Write-Host "4. Cloning sample repository..."
+# Documentsへ移動
 Set-Location "$env:USERPROFILE\Documents"
-& $GIT clone https://github.com/TUMH0404/python-stud.git
-Set-Location "$env:USERPROFILE\Documents\python-stud"
 
-Write-Host ""
-Write-Host "All done."
+# Git実行
+if ($GIT) {
+    & $GIT clone https://github.com/TUMH0404/python-stud.git
+} else {
+    Write-Host "Git executable not found."
+    exit 1
+}
+
+# フォルダ移動
+Set-Location $TARGET
